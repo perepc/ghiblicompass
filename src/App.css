@@ -23,8 +23,8 @@
 .app__sidebar-toggle {
   display: none;
   position: absolute;
-  top: 12px;
-  left: 12px;
+  bottom: 24px;
+  right: 16px;
   z-index: 1000;
   background: var(--color-surface);
   border: 2px solid var(--color-border);

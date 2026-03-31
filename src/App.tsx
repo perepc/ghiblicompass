@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { useLanguage } from './i18n/LanguageContext';
 import { Header } from './components/Header/Header';
 import { FilterPanel } from './components/FilterPanel/FilterPanel';
 import { GhibliMap } from './components/GhibliMap/GhibliMap';
@@ -9,6 +10,7 @@ import './App.css';
 
 function AppContent() {
   const { filters, filteredLocations, toggleFilm, toggleType, clearAll } = useFilters();
+  const { t } = useLanguage();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -22,9 +24,9 @@ function AppContent() {
         <button
           className="app__sidebar-toggle"
           onClick={() => setSidebarOpen((o) => !o)}
-          aria-label="Toggle filters"
+          aria-label={t('toggleFilters')}
         >
-          {sidebarOpen ? '✕' : '☰'} Filtros
+          {sidebarOpen ? '✕' : '☰'} {t('toggleFilters')}
         </button>
 
         <div className={`app__sidebar ${sidebarOpen ? 'app__sidebar--open' : ''}`}>
