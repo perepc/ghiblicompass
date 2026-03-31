@@ -1,15 +1,6 @@
 import type { LocationType } from '../../types';
-
-export const TYPE_LABELS: Record<LocationType, string> = {
-  museo: 'Museo',
-  parque_tematico: 'Parque Temático',
-  naturaleza: 'Naturaleza',
-  ciudad: 'Ciudad',
-  onsen: 'Onsen',
-  templo_santuario: 'Templo / Santuario',
-  paisaje: 'Paisaje',
-  industria: 'Industria',
-};
+import type { Lang } from '../../i18n';
+import { translations } from '../../i18n';
 
 export const TYPE_ICONS: Record<LocationType, string> = {
   museo: '🏛️',
@@ -21,6 +12,10 @@ export const TYPE_ICONS: Record<LocationType, string> = {
   paisaje: '🏔️',
   industria: '⚙️',
 };
+
+export function getTypeLabel(type: LocationType, lang: Lang): string {
+  return translations[lang].types[type];
+}
 
 export const ALL_TYPES: LocationType[] = [
   'museo',

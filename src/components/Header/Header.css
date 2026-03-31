@@ -44,6 +44,14 @@
   letter-spacing: 0.03em;
 }
 
+/* ─── Right side ────────────────────────────────────────────────── */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
 .header__counter {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -51,7 +59,6 @@
   padding: 4px 14px;
   text-align: center;
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .header__counter-number {
@@ -66,6 +73,43 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* ─── Language switcher ─────────────────────────────────────────── */
+.lang-switcher {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-switcher__btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-switcher__btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.lang-switcher__btn--active {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.lang-switcher__btn--active:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 @media (max-width: 480px) {
   .header {
     padding: 10px 14px;
@@ -76,6 +120,10 @@
   }
 
   .header__subtitle {
+    display: none;
+  }
+
+  .header__counter {
     display: none;
   }
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LanguageProvider } from './i18n/LanguageContext';
 import { Header } from './components/Header/Header';
 import { FilterPanel } from './components/FilterPanel/FilterPanel';
 import { GhibliMap } from './components/GhibliMap/GhibliMap';
@@ -6,9 +7,8 @@ import { useFilters } from './hooks/useFilters';
 import { LOCATIONS } from './data/locations';
 import './App.css';
 
-export default function App() {
-  const { filters, filteredLocations, toggleFilm, toggleType, clearAll } =
-    useFilters();
+function AppContent() {
+  const { filters, filteredLocations, toggleFilm, toggleType, clearAll } = useFilters();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -19,19 +19,15 @@ export default function App() {
       />
 
       <div className="app__body">
-        {/* Mobile sidebar toggle */}
         <button
           className="app__sidebar-toggle"
           onClick={() => setSidebarOpen((o) => !o)}
-          aria-label="Abrir/cerrar panel de filtros"
+          aria-label="Toggle filters"
         >
           {sidebarOpen ? '✕' : '☰'} Filtros
         </button>
 
-        {/* Desktop: sidebar always visible; Mobile: toggled */}
-        <div
-          className={`app__sidebar ${sidebarOpen ? 'app__sidebar--open' : ''}`}
-        >
+        <div className={`app__sidebar ${sidebarOpen ? 'app__sidebar--open' : ''}`}>
           <FilterPanel
             filters={filters}
             onToggleFilm={toggleFilm}
@@ -47,5 +43,13 @@ export default function App() {
         </main>
       </div>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }

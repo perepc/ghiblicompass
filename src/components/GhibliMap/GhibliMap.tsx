@@ -4,6 +4,7 @@ import L from 'leaflet';
 import type { GhibliLocation } from '../../types';
 import { FILMS_MAP } from '../../data/films';
 import { LocationPopup } from '../LocationPopup/LocationPopup';
+import { useLanguage } from '../../i18n/LanguageContext';
 import 'leaflet/dist/leaflet.css';
 import './GhibliMap.css';
 
@@ -79,6 +80,8 @@ interface GhibliMapProps {
 }
 
 export function GhibliMap({ locations }: GhibliMapProps) {
+  const { t } = useLanguage();
+
   return (
     <div className="ghibli-map-wrapper">
       <MapContainer
@@ -120,8 +123,8 @@ export function GhibliMap({ locations }: GhibliMapProps) {
       {locations.length === 0 && (
         <div className="ghibli-map__empty">
           <span className="ghibli-map__empty-icon">🗺️</span>
-          <p>No hay localizaciones que coincidan con los filtros seleccionados.</p>
-          <p>Prueba a seleccionar otros filtros.</p>
+          <p>{t('noResults')}</p>
+          <p>{t('tryOther')}</p>
         </div>
       )}
     </div>

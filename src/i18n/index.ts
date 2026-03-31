@@ -1,0 +1,58 @@
+export type Lang = 'es' | 'en';
+
+export const translations = {
+  es: {
+    subtitle: 'Mapa de localizaciones de Studio Ghibli en Japón',
+    places: 'lugares',
+    filters: 'Filtros',
+    clearAll: 'Limpiar todo',
+    showing: 'Mostrando',
+    of: 'de',
+    locations: 'localizaciones',
+    films: '🎬 Películas',
+    placeType: '📍 Tipo de lugar',
+    alsoIn: 'También en:',
+    noResults: 'No hay localizaciones que coincidan con los filtros seleccionados.',
+    tryOther: 'Prueba a seleccionar otros filtros.',
+    toggleFilters: 'Filtros',
+    prefecture: 'Prefectura',
+    types: {
+      museo: 'Museo',
+      parque_tematico: 'Parque Temático',
+      naturaleza: 'Naturaleza',
+      ciudad: 'Ciudad',
+      onsen: 'Onsen',
+      templo_santuario: 'Templo / Santuario',
+      paisaje: 'Paisaje',
+      industria: 'Industria',
+    },
+  },
+  en: {
+    subtitle: 'Map of Studio Ghibli locations in Japan',
+    places: 'places',
+    filters: 'Filters',
+    clearAll: 'Clear all',
+    showing: 'Showing',
+    of: 'of',
+    locations: 'locations',
+    films: '🎬 Films',
+    placeType: '📍 Place type',
+    alsoIn: 'Also in:',
+    noResults: 'No locations match the selected filters.',
+    tryOther: 'Try selecting different filters.',
+    toggleFilters: 'Filters',
+    prefecture: 'Prefecture',
+    types: {
+      museo: 'Museum',
+      parque_tematico: 'Theme Park',
+      naturaleza: 'Nature',
+      ciudad: 'City',
+      onsen: 'Onsen',
+      templo_santuario: 'Temple / Shrine',
+      paisaje: 'Landscape',
+      industria: 'Industry',
+    },
+  },
+} as const;
+
+export type Translations = typeof translations.es;

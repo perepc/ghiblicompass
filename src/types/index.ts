@@ -11,6 +11,7 @@ export type LocationType =
 export interface Film {
   id: string;
   title: string;
+  titleEn: string;
   year: number;
   color: string;
 }
@@ -18,11 +19,13 @@ export interface Film {
 export interface GhibliLocation {
   id: string;
   name: string;
+  nameEn: string;
   nameJp: string;
   coordinates: [number, number];
   filmIds: string[];
   type: LocationType;
   description: string;
+  descriptionEn: string;
   prefecture: string;
 }
 
