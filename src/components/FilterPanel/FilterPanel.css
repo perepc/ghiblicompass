@@ -1,0 +1,197 @@
+.filter-panel {
+  width: 280px;
+  min-width: 280px;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.filter-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 8px;
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 1;
+}
+
+.filter-panel__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.filter-panel__clear-btn {
+  font-size: 11px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-danger);
+  background: none;
+  border: 1px solid var(--color-danger);
+  border-radius: 100px;
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-panel__clear-btn:hover {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.filter-panel__count {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  padding: 8px 16px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filter-panel__count strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ─── Filter sections ─────────────────────────────────────────── */
+.filter-section {
+  padding: 14px 14px 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+}
+
+.filter-section__title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ─── Chips ───────────────────────────────────────────────────── */
+.filter-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border-radius: var(--border-radius-sm);
+  border: 1.5px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all var(--transition);
+  text-align: left;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.filter-chip:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border);
+}
+
+.filter-chip--active {
+  font-weight: 600;
+}
+
+.filter-chip__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.filter-chip__label {
+  flex: 1;
+}
+
+.filter-chip__year {
+  font-size: 10px;
+  color: inherit;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+/* Type chips */
+.filter-chip--type {
+  border-color: var(--color-border);
+}
+
+.filter-chip--active-type {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.filter-chip--active-type:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+}
+
+/* ─── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .filter-panel {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-top: 1px solid var(--color-border);
+    max-height: 40vh;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0;
+  }
+
+  .filter-panel__header {
+    position: static;
+    min-width: 120px;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px;
+  }
+
+  .filter-panel__count {
+    display: none;
+  }
+
+  .filter-section {
+    min-width: 200px;
+    border-bottom: none;
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+    max-height: 40vh;
+  }
+
+  .filter-section:last-child {
+    border-right: none;
+  }
+}

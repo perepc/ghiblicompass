@@ -1,0 +1,105 @@
+/* ─── Variables ──────────────────────────────────────────────────────────── */
+:root {
+  --color-primary: #2d5a27;
+  --color-primary-light: #4a7c40;
+  --color-secondary: #c8a94e;
+  --color-secondary-dark: #a08030;
+  --color-bg: #f5f0e8;
+  --color-surface: #fffef5;
+  --color-surface-hover: #f0ead8;
+  --color-border: #d4c9a8;
+  --color-text: #2c2c2c;
+  --color-text-muted: #6b6452;
+  --color-danger: #b84040;
+
+  --font-display: 'Noto Serif JP', 'Georgia', serif;
+  --font-body: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+
+  --border-radius-sm: 6px;
+  --border-radius: 12px;
+  --border-radius-lg: 20px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+
+  --transition: 0.2s ease;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ─── Leaflet overrides ──────────────────────────────────────────────────── */
+.leaflet-container {
+  font-family: var(--font-body);
+  background: #e8e0d0;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow-lg) !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: 300px !important;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-popup-close-button {
+  top: 10px !important;
+  right: 10px !important;
+  color: var(--color-text-muted) !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  z-index: 10;
+}
+
+.leaflet-popup-close-button:hover {
+  color: var(--color-text) !important;
+}
