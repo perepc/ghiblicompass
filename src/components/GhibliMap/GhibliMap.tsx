@@ -89,8 +89,10 @@ export function GhibliMap({ locations }: GhibliMapProps) {
         scrollWheelZoom={true}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://maps.google.com">Google Maps</a>'
+          url="https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"
+          subdomains={['0', '1', '2', '3']}
+          maxZoom={20}
         />
 
         <FitBoundsOnChange locations={locations} />
