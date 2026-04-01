@@ -103,3 +103,9 @@ body {
 .leaflet-popup-close-button:hover {
   color: var(--color-text) !important;
 }
+
+@media (max-width: 768px) {
+  .leaflet-control-zoom {
+    display: none !important;
+  }
+}
