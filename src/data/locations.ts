@@ -15,6 +15,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'The official Studio Ghibli museum, designed by Hayao Miyazaki himself. It features exhibitions on the creative process, exclusive short films, and the iconic rooftop robot warrior.',
     prefecture: 'Tokyo',
+    wikiSlug: 'Ghibli_Museum',
   },
   {
     id: 'ghibli-park',
@@ -27,8 +28,9 @@ export const LOCATIONS: GhibliLocation[] = [
     description:
       'Parque temático abierto en 2022 en los terrenos de la Expo de Aichi. Incluye zonas inspiradas en El viaje de Chihiro, Mi vecino Totoro, El castillo en el cielo y El castillo ambulante.',
     descriptionEn:
-      'Theme park opened in 2022 on the grounds of the Aichi Expo. It includes areas inspired by Spirited Away, My Neighbor Totoro, Castle in the Sky, and Howl\'s Moving Castle.',
+      "Theme park opened in 2022 on the grounds of the Aichi Expo. It includes areas inspired by Spirited Away, My Neighbor Totoro, Castle in the Sky, and Howl's Moving Castle.",
     prefecture: 'Aichi',
+    wikiSlug: 'Ghibli_Park',
   },
 
   // ── Mi vecino Totoro ──────────────────────────────────────────────────────
@@ -43,8 +45,9 @@ export const LOCATIONS: GhibliLocation[] = [
     description:
       'Las colinas que inspiraron el bosque donde vive Totoro. Hoy es un área verde protegida gracias en parte al activismo de Miyazaki. Se puede visitar el "Totoro no Furusato Nature Fund".',
     descriptionEn:
-      'The hills that inspired the forest where Totoro lives. Today it is a protected green area, partly thanks to Miyazaki\'s activism. The "Totoro no Furusato Nature Fund" can be visited here.',
+      "The hills that inspired the forest where Totoro lives. Today it is a protected green area, partly thanks to Miyazaki's activism. The \"Totoro no Furusato Nature Fund\" can be visited here.",
     prefecture: 'Saitama / Tokyo',
+    wikiSlug: 'Sayama_Hills',
   },
   {
     id: 'tokorozawa',
@@ -55,10 +58,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['totoro'],
     type: 'ciudad',
     description:
-      'Ciudad natal de Totoro según el lore oficial. Alberga el complejo cultural Kadokawa con referencias a Totoro y la cultura pop japonesa.',
+      "Ciudad natal de Totoro según el lore oficial. Alberga el complejo cultural Kadokawa con referencias a Totoro y la cultura pop japonesa.",
     descriptionEn:
-      'Totoro\'s official hometown according to the lore. It houses the Kadokawa cultural complex with references to Totoro and Japanese pop culture.',
+      "Totoro's official hometown according to the lore. It houses the Kadokawa cultural complex with references to Totoro and Japanese pop culture.",
     prefecture: 'Saitama',
+    wikiSlug: 'Tokorozawa',
   },
   {
     id: 'inokashira-park',
@@ -69,10 +73,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['totoro'],
     type: 'naturaleza',
     description:
-      'Parque adyacente al Museo Ghibli. Sus frondosos árboles y estanque evocan la atmósfera del bosque de Totoro. Lugar de paseo habitual de Miyazaki.',
+      "Parque adyacente al Museo Ghibli. Sus frondosos árboles y estanque evocan la atmósfera del bosque de Totoro. Lugar de paseo habitual de Miyazaki.",
     descriptionEn:
-      'Park adjacent to the Ghibli Museum. Its lush trees and pond evoke the atmosphere of Totoro\'s forest. A favourite walking spot for Miyazaki.',
+      "Park adjacent to the Ghibli Museum. Its lush trees and pond evoke the atmosphere of Totoro's forest. A favourite walking spot for Miyazaki.",
     prefecture: 'Tokyo',
+    wikiSlug: 'Inokashira_Park',
   },
 
   // ── La princesa Mononoke ──────────────────────────────────────────────────
@@ -89,6 +94,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'UNESCO World Heritage island whose ancient cedar forest (yakusugi) was the primary visual inspiration for the Forest of the Deer God in Princess Mononoke.',
     prefecture: 'Kagoshima',
+    wikiSlug: 'Yakushima',
   },
   {
     id: 'tatara-shimane',
@@ -103,6 +109,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'The tatara iron-smelting tradition of the Chugoku region inspired the ironworks of Irontown (Tataraba) in the film. Live demonstrations can still be seen at the museum.',
     prefecture: 'Shimane',
+    wikiSlug: 'Tatara_(metallurgy)',
   },
   {
     id: 'izumo-taisha',
@@ -117,6 +124,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'One of the oldest Shinto shrines in Japan, dedicated to Okuninushi. The spiritual atmosphere and sacred forests surrounding it permeate the world of Princess Mononoke.',
     prefecture: 'Shimane',
+    wikiSlug: 'Izumo_Grand_Shrine',
   },
   {
     id: 'kumano-kodo',
@@ -131,6 +139,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'Network of pilgrimage routes through ancient forests of the Kii Peninsula. Their sacred landscapes and abundant wildlife are a clear source of inspiration for the film.',
     prefecture: 'Wakayama / Mie',
+    wikiSlug: 'Kumano_Kodō',
   },
   {
     id: 'eiheiji-temple',
@@ -145,6 +154,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'Important 13th-century Zen temple surrounded by giant cedars. The dense, mystical forest atmosphere of the complex resonates with the sacred forests of the film.',
     prefecture: 'Fukui',
+    wikiSlug: 'Eiheiji',
   },
 
   // ── El viaje de Chihiro ───────────────────────────────────────────────────
@@ -157,10 +167,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['chihiro'],
     type: 'onsen',
     description:
-      'Una de las termas más antiguas de Japón (s. III a.C.). El edificio principal, con su arquitectura de madera multicuerpo, es considerada una de las principales inspiraciones visuales del Yubaba Bathhouse.',
+      "Una de las termas más antiguas de Japón (s. III a.C.). El edificio principal, con su arquitectura de madera multicuerpo, es considerada una de las principales inspiraciones visuales del Yubaba Bathhouse.",
     descriptionEn:
-      'One of the oldest hot springs in Japan (3rd century BC). The main building, with its multi-storey wooden architecture, is considered one of the primary visual inspirations for Yubaba\'s Bathhouse.',
+      "One of the oldest hot springs in Japan (3rd century BC). The main building, with its multi-storey wooden architecture, is considered one of the primary visual inspirations for Yubaba's Bathhouse.",
     prefecture: 'Ehime',
+    wikiSlug: 'Dogo_Onsen',
   },
   {
     id: 'beppu-onsen',
@@ -171,10 +182,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['chihiro'],
     type: 'onsen',
     description:
-      'Los "Infiernos" de Beppu: piscinas termales de colores surrealistas rodeadas de vapor. La atmósfera sobrenatural de los manantiales refleja el mundo del bathhouse de El viaje de Chihiro.',
+      "Los \"Infiernos\" de Beppu: piscinas termales de colores surrealistas rodeadas de vapor. La atmósfera sobrenatural de los manantiales refleja el mundo del bathhouse de El viaje de Chihiro.",
     descriptionEn:
-      'The "Hells" of Beppu: surreally coloured thermal pools surrounded by steam. The supernatural atmosphere of the springs mirrors the world of Spirited Away\'s bathhouse.',
+      "The \"Hells\" of Beppu: surreally coloured thermal pools surrounded by steam. The supernatural atmosphere of the springs mirrors the world of Spirited Away's bathhouse.",
     prefecture: 'Oita',
+    wikiSlug: 'Beppu',
   },
 
   // ── Ponyo ────────────────────────────────────────────────────────────────
@@ -191,6 +203,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'Picturesque Edo-era port with stone lighthouses, white warehouses, and a bay teeming with marine life. Miyazaki lived here temporarily and turned it into the main setting for Ponyo.',
     prefecture: 'Hiroshima',
+    wikiSlug: 'Tomonoura',
   },
 
   // ── Si escuchas tu corazón ────────────────────────────────────────────────
@@ -205,8 +218,9 @@ export const LOCATIONS: GhibliLocation[] = [
     description:
       'Barrio residencial de colinas en el oeste de Tokyo que sirvió de modelo para las callejuelas, escaleras y vistas que recorre Shizuku en Si escuchas tu corazón. Cuenta con murales y señales de la película.',
     descriptionEn:
-      'Hilly residential neighbourhood in west Tokyo that served as the model for the alleyways, staircases and views explored by Shizuku in Whisper of the Heart. It features murals and signs referencing the film.',
+      "Hilly residential neighbourhood in west Tokyo that served as the model for the alleyways, staircases and views explored by Shizuku in Whisper of the Heart. It features murals and signs referencing the film.",
     prefecture: 'Tokyo',
+    wikiSlug: 'Tama,_Tokyo',
   },
 
   // ── La tumba de las luciérnagas ───────────────────────────────────────────
@@ -219,10 +233,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['fireflies'],
     type: 'ciudad',
     description:
-      'Zona portuaria de Kobe devastada por los bombardeos de 1945. Es el área que recorre Seita tras el bombardeo en La tumba de las luciérnagas. Hoy es un tranquilo barrio industrial.',
+      "Zona portuaria de Kobe devastada por los bombardeos de 1945. Es el área que recorre Seita tras el bombardeo en La tumba de las luciérnagas. Hoy es un tranquilo barrio industrial.",
     descriptionEn:
-      'Kobe\'s port area devastated by the 1945 bombings. This is the area Seita wanders through after the air raid in Grave of the Fireflies. Today it is a quiet industrial neighbourhood.',
+      "Kobe's port area devastated by the 1945 bombings. This is the area Seita wanders through after the air raid in Grave of the Fireflies. Today it is a quiet industrial neighbourhood.",
     prefecture: 'Hyogo',
+    wikiSlug: 'Nada-ku,_Kobe',
   },
   {
     id: 'nishinomiya',
@@ -233,10 +248,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['fireflies'],
     type: 'ciudad',
     description:
-      'Ciudad donde residía la familia de la tía de Seita. El director Isao Takahata creció en esta zona y situó aquí episodios clave de la historia basada en la novela de Nosaka.',
+      "Ciudad donde residía la familia de la tía de Seita. El director Isao Takahata creció en esta zona y situó aquí episodios clave de la historia basada en la novela de Nosaka.",
     descriptionEn:
-      'The city where Seita\'s aunt\'s family lived. Director Isao Takahata grew up in this area and set key episodes of the story based on Nosaka\'s novel here.',
+      "The city where Seita's aunt's family lived. Director Isao Takahata grew up in this area and set key episodes of the story based on Nosaka's novel here.",
     prefecture: 'Hyogo',
+    wikiSlug: 'Nishinomiya',
   },
   {
     id: 'sannomiya',
@@ -247,10 +263,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['fireflies'],
     type: 'ciudad',
     description:
-      'Centro neurálgico de Kobe. La estación de Sannomiya aparece en la secuencia inicial de la película, donde Seita aguarda en el andén. Hoy es el corazón comercial de la ciudad.',
+      "Centro neurálgico de Kobe. La estación de Sannomiya aparece en la secuencia inicial de la película, donde Seita aguarda en el andén. Hoy es el corazón comercial de la ciudad.",
     descriptionEn:
-      'The nerve centre of Kobe. Sannomiya Station appears in the film\'s opening sequence, where Seita waits on the platform. Today it is the commercial heart of the city.',
+      "The nerve centre of Kobe. Sannomiya Station appears in the film's opening sequence, where Seita waits on the platform. Today it is the commercial heart of the city.",
     prefecture: 'Hyogo',
+    wikiSlug: 'Kobe',
   },
 
   // ── Recuerdos del ayer ────────────────────────────────────────────────────
@@ -265,8 +282,9 @@ export const LOCATIONS: GhibliLocation[] = [
     description:
       'Capital de la prefectura de Yamagata. Taeko visita esta ciudad rural para ayudar en la cosecha del cártamo. La película documenta con precisión la vida campesina de la región en los años 60.',
     descriptionEn:
-      'Capital of Yamagata Prefecture. Taeko visits this rural city to help with the safflower harvest. The film accurately documents the rural life of the region in the 1960s.',
+      "Capital of Yamagata Prefecture. Taeko visits this rural city to help with the safflower harvest. The film accurately documents the rural life of the region in the 1960s.",
     prefecture: 'Yamagata',
+    wikiSlug: 'Yamagata,_Yamagata',
   },
   {
     id: 'yamagata-fields',
@@ -277,10 +295,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['yesterday'],
     type: 'paisaje',
     description:
-      'Los campos de benibana (cártamo) que tiñen el paisaje de amarillo en verano. Símbolo de la prefectura y escenario principal del trabajo rural de Taeko en Recuerdos del ayer.',
+      "Los campos de benibana (cártamo) que tiñen el paisaje de amarillo en verano. Símbolo de la prefectura y escenario principal del trabajo rural de Taeko en Recuerdos del ayer.",
     descriptionEn:
-      'The benibana (safflower) fields that turn the landscape yellow in summer. A symbol of the prefecture and the main setting for Taeko\'s rural work in Only Yesterday.',
+      "The benibana (safflower) fields that turn the landscape yellow in summer. A symbol of the prefecture and the main setting for Taeko's rural work in Only Yesterday.",
     prefecture: 'Yamagata',
+    wikiSlug: 'Safflower',
   },
 
   // ── Pompoko ────────────────────────────────────────────────────────────────
@@ -297,6 +316,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'The Tama hills west of Tokyo, urbanised since the 1960s. Their environmental destruction to build new residential towns is the central conflict of Pom Poko.',
     prefecture: 'Tokyo / Kanagawa',
+    wikiSlug: 'Tama_Hills',
   },
 
   // ── El viento se levanta ───────────────────────────────────────────────────
@@ -309,10 +329,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['wind'],
     type: 'paisaje',
     description:
-      'El volcán más alto de Japón aparece en múltiples escenas de El viento se levanta. Jiro Horikoshi trabajó en fábricas aeronáuticas de la región con vistas al Fuji, que inspira sus sueños.',
+      "El volcán más alto de Japón aparece en múltiples escenas de El viento se levanta. Jiro Horikoshi trabajó en fábricas aeronáuticas de la región con vistas al Fuji, que inspira sus sueños.",
     descriptionEn:
-      'Japan\'s tallest volcano appears in multiple scenes of The Wind Rises. Jiro Horikoshi worked in aeronautical factories in the region overlooking Fuji, which inspires his dreams.',
+      "Japan's tallest volcano appears in multiple scenes of The Wind Rises. Jiro Horikoshi worked in aeronautical factories in the region overlooking Fuji, which inspires his dreams.",
     prefecture: 'Shizuoka / Yamanashi',
+    wikiSlug: 'Mount_Fuji',
   },
   {
     id: 'kagoshima',
@@ -323,10 +344,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['wind'],
     type: 'paisaje',
     description:
-      'La bahía de Kagoshima y el volcán activo Sakurajima aparecen en las escenas del viaje de Jiro al sur de Japón. El paisaje volcánico sirve de trasfondo para las reflexiones del protagonista.',
+      "La bahía de Kagoshima y el volcán activo Sakurajima aparecen en las escenas del viaje de Jiro al sur de Japón. El paisaje volcánico sirve de trasfondo para las reflexiones del protagonista.",
     descriptionEn:
-      'Kagoshima Bay and the active Sakurajima volcano appear in scenes of Jiro\'s journey to southern Japan. The volcanic landscape serves as a backdrop for the protagonist\'s reflections.',
+      "Kagoshima Bay and the active Sakurajima volcano appear in scenes of Jiro's journey to southern Japan. The volcanic landscape serves as a backdrop for the protagonist's reflections.",
     prefecture: 'Kagoshima',
+    wikiSlug: 'Sakurajima',
   },
 
   // ── Cuando Marnie estuvo aquí ──────────────────────────────────────────────
@@ -339,10 +361,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['marnie'],
     type: 'naturaleza',
     description:
-      'La mayor zona húmeda de Japón, Patrimonio de la Humanidad, con paisajes de niebla y silencio que recuerdan a los pastizales donde Anna pinta en la película.',
+      "La mayor zona húmeda de Japón, Patrimonio de la Humanidad, con paisajes de niebla y silencio que recuerdan a los pastizales donde Anna pinta en la película.",
     descriptionEn:
-      'Japan\'s largest wetland, a UNESCO World Heritage Site, with misty, silent landscapes reminiscent of the meadows where Anna paints in the film.',
+      "Japan's largest wetland, a UNESCO World Heritage Site, with misty, silent landscapes reminiscent of the meadows where Anna paints in the film.",
     prefecture: 'Hokkaido',
+    wikiSlug: 'Kushiro_Wetlands',
   },
   {
     id: 'lake-akan',
@@ -353,10 +376,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['marnie'],
     type: 'naturaleza',
     description:
-      'Lago volcánico de Hokkaido conocido por sus bolas de algas marimo. Su entorno tranquilo y brumoso aporta la atmósfera introspectiva que caracteriza Cuando Marnie estuvo aquí.',
+      "Lago volcánico de Hokkaido conocido por sus bolas de algas marimo. Su entorno tranquilo y brumoso aporta la atmósfera introspectiva que caracteriza Cuando Marnie estuvo aquí.",
     descriptionEn:
-      'Volcanic lake in Hokkaido known for its marimo algae balls. Its calm, misty surroundings provide the introspective atmosphere that characterises When Marnie Was There.',
+      "Volcanic lake in Hokkaido known for its marimo algae balls. Its calm, misty surroundings provide the introspective atmosphere that characterises When Marnie Was There.",
     prefecture: 'Hokkaido',
+    wikiSlug: 'Lake_Akan',
   },
 
   // ── El cuento de la Princesa Kaguya ───────────────────────────────────────
@@ -373,6 +397,7 @@ export const LOCATIONS: GhibliLocation[] = [
     descriptionEn:
       'The bamboo forests of the Nara and Kyoto region inspire the setting where the elderly bamboo cutter finds little Kaguya inside a glowing stalk in the tale.',
     prefecture: 'Nara',
+    wikiSlug: 'Nara,_Nara',
   },
 
   // ── El castillo en el cielo ────────────────────────────────────────────────
@@ -385,10 +410,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['laputa'],
     type: 'paisaje',
     description:
-      'El castillo blanco más imponente de Japón, Patrimonio de la Humanidad. Su silueta gótica y elevada influyó en la concepción visual de los castillos de El castillo en el cielo.',
+      "El castillo blanco más imponente de Japón, Patrimonio de la Humanidad. Su silueta gótica y elevada influyó en la concepción visual de los castillos de El castillo en el cielo.",
     descriptionEn:
-      'Japan\'s most imposing white castle, a UNESCO World Heritage Site. Its tall, Gothic silhouette influenced the visual conception of the castles in Castle in the Sky.',
+      "Japan's most imposing white castle, a UNESCO World Heritage Site. Its tall, Gothic silhouette influenced the visual conception of the castles in Castle in the Sky.",
     prefecture: 'Hyogo',
+    wikiSlug: 'Himeji_Castle',
   },
   {
     id: 'oga-peninsula',
@@ -399,10 +425,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['laputa'],
     type: 'paisaje',
     description:
-      'Penínsual rocosa de Akita con acantilados dramáticos sobre el Mar del Japón. Sus paisajes costeros abruptos evocan las ciudades mineras y los escenarios de extracción de El castillo en el cielo.',
+      "Penínsual rocosa de Akita con acantilados dramáticos sobre el Mar del Japón. Sus paisajes costeros abruptos evocan las ciudades mineras y los escenarios de extracción de El castillo en el cielo.",
     descriptionEn:
-      'Rocky peninsula in Akita with dramatic cliffs over the Sea of Japan. Its rugged coastal landscapes evoke the mining towns and extraction sites of Castle in the Sky.',
+      "Rocky peninsula in Akita with dramatic cliffs over the Sea of Japan. Its rugged coastal landscapes evoke the mining towns and extraction sites of Castle in the Sky.",
     prefecture: 'Akita',
+    wikiSlug: 'Oga,_Akita',
   },
 
   // ── Kiki's Delivery Service ────────────────────────────────────────────────
@@ -415,10 +442,11 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['kiki'],
     type: 'ciudad',
     description:
-      'El pueblo pesquero de Ine con sus casas con garaje marino (funaya) al borde del mar. El ambiente costero mediterráneo de la película de Kiki comparte el encanto pintoresco de este lugar.',
+      "El pueblo pesquero de Ine con sus casas con garaje marino (funaya) al borde del mar. El ambiente costero mediterráneo de la película de Kiki comparte el encanto pintoresco de este lugar.",
     descriptionEn:
-      'The fishing village of Ine with its houses featuring a marine garage (funaya) right at the water\'s edge. The coastal, Mediterranean-like atmosphere of Kiki\'s film shares the picturesque charm of this place.',
+      "The fishing village of Ine with its houses featuring a marine garage (funaya) right at the water's edge. The coastal, Mediterranean-like atmosphere of Kiki's film shares the picturesque charm of this place.",
     prefecture: 'Kyoto',
+    wikiSlug: 'Ine,_Kyoto',
   },
 
   // ── Nausicaä del Valle del Viento ──────────────────────────────────────────
@@ -433,8 +461,9 @@ export const LOCATIONS: GhibliLocation[] = [
     description:
       'Los acantilados y vientos marinos de la Península de Miura, al sur de Yokohama, influyeron en Miyazaki para concebir el Valle del Viento y los planeadores de Nausicaä.',
     descriptionEn:
-      'The cliffs and sea winds of the Miura Peninsula, south of Yokohama, influenced Miyazaki in conceiving the Valley of the Wind and Nausicaä\'s gliders.',
+      "The cliffs and sea winds of the Miura Peninsula, south of Yokohama, influenced Miyazaki in conceiving the Valley of the Wind and Nausicaä's gliders.",
     prefecture: 'Kanagawa',
+    wikiSlug: 'Miura_Peninsula',
   },
 
   // ── El castillo ambulante ───────────────────────────────────────────────────
@@ -447,9 +476,10 @@ export const LOCATIONS: GhibliLocation[] = [
     filmIds: ['howl'],
     type: 'ciudad',
     description:
-      'Aunque El castillo ambulante se inspiró principalmente en ciudades europeas como Colmar (Alsacia), el equipo del estudio trabajó desde su base japonesa. Nagoya alberga el Ghibli Park más cercano a sus influencias visuals.',
+      "Aunque El castillo ambulante se inspiró principalmente en ciudades europeas como Colmar (Alsacia), el equipo del estudio trabajó desde su base japonesa. Nagoya alberga el Ghibli Park más cercano a sus influencias visuals.",
     descriptionEn:
-      'Although Howl\'s Moving Castle was mainly inspired by European cities such as Colmar (Alsace), the studio team worked from their Japanese base. Nagoya is home to Ghibli Park, closest to its visual influences.',
+      "Although Howl's Moving Castle was mainly inspired by European cities such as Colmar (Alsace), the studio team worked from their Japanese base. Nagoya is home to Ghibli Park, closest to its visual influences.",
     prefecture: 'Aichi',
+    wikiSlug: 'Nagoya',
   },
 ];

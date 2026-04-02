@@ -27,9 +27,18 @@ export interface GhibliLocation {
   description: string;
   descriptionEn: string;
   prefecture: string;
+  wikiSlug?: string;
 }
 
 export interface FilterState {
   films: Set<string>;
   types: Set<LocationType>;
+}
+
+export interface GhibliApiFilm {
+  id: string;
+  title: string;
+  description: string;
+  director: string;
+  rt_score: string;
 }

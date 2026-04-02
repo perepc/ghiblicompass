@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import type { GhibliLocation } from '../../types';
+import type { GhibliLocation, GhibliApiFilm } from '../../types';
 import { FILMS_MAP } from '../../data/films';
 import { LocationPopup } from '../LocationPopup/LocationPopup';
 import { useLanguage } from '../../i18n/LanguageContext';
@@ -77,9 +77,10 @@ function FitBoundsOnChange({ locations }: FitBoundsProps) {
 
 interface GhibliMapProps {
   locations: GhibliLocation[];
+  ghibliFilms: GhibliApiFilm[];
 }
 
-export function GhibliMap({ locations }: GhibliMapProps) {
+export function GhibliMap({ locations, ghibliFilms }: GhibliMapProps) {
   const { t } = useLanguage();
 
   return (
@@ -113,7 +114,7 @@ export function GhibliMap({ locations }: GhibliMapProps) {
               icon={icon}
             >
               <Popup>
-                <LocationPopup location={loc} />
+                <LocationPopup location={loc} ghibliFilms={ghibliFilms} />
               </Popup>
             </Marker>
           );

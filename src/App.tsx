@@ -5,12 +5,14 @@ import { Header } from './components/Header/Header';
 import { FilterPanel } from './components/FilterPanel/FilterPanel';
 import { GhibliMap } from './components/GhibliMap/GhibliMap';
 import { useFilters } from './hooks/useFilters';
+import { useGhibliFilms } from './hooks/useGhibliFilms';
 import { LOCATIONS } from './data/locations';
 import './App.css';
 
 function AppContent() {
   const { filters, filteredLocations, toggleFilm, toggleType, clearAll } = useFilters();
   const { t } = useLanguage();
+  const ghibliFilms = useGhibliFilms();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -41,7 +43,7 @@ function AppContent() {
         </div>
 
         <main className="app__map">
-          <GhibliMap locations={filteredLocations} />
+          <GhibliMap locations={filteredLocations} ghibliFilms={ghibliFilms} />
         </main>
       </div>
     </div>
