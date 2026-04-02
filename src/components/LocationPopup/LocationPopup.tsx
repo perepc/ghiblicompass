@@ -1,18 +1,16 @@
 import { useState, useEffect } from 'react';
-import type { GhibliLocation, GhibliApiFilm } from '../../types';
+import type { GhibliLocation } from '../../types';
 import { FILMS_MAP } from '../../data/films';
 import { TYPE_ICONS, getTypeLabel } from '../FilterPanel/typeConfig';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { fetchWikiSummary } from '../../services/wikipedia';
-import { matchGhibliFilm } from '../../services/ghibliApi';
 import './LocationPopup.css';
 
 interface LocationPopupProps {
   location: GhibliLocation;
-  ghibliFilms: GhibliApiFilm[];
 }
 
-export function LocationPopup({ location, ghibliFilms }: LocationPopupProps) {
+export function LocationPopup({ location }: LocationPopupProps) {
   const { lang, t } = useLanguage();
   const primaryFilm = FILMS_MAP[location.filmIds[0] ?? ''];
 
@@ -23,31 +21,23 @@ export function LocationPopup({ location, ghibliFilms }: LocationPopupProps) {
     : '';
 
   // Wikipedia summary (lazy, cached)
-  const [wikiLoading, setWikiLoading] = useState(false);
   const [wikiExtract, setWikiExtract] = useState<string | null>(null);
   const [wikiUrl, setWikiUrl] = useState<string | null>(null);
 
   useEffect(() => {
     if (!location.wikiSlug) return;
-    setWikiLoading(true);
     setWikiExtract(null);
+    setWikiUrl(null);
     fetchWikiSummary(location.wikiSlug, lang).then((summary) => {
       if (summary) {
-        // Trim to ~200 chars for the excerpt
         const extract = summary.extract.length > 220
           ? summary.extract.slice(0, 220).replace(/\s\S+$/, '') + '…'
           : summary.extract;
         setWikiExtract(extract);
         setWikiUrl(summary.content_urls.desktop.page);
       }
-      setWikiLoading(false);
     });
   }, [location.wikiSlug, lang]);
-
-  // Ghibli API film enrichment
-  const enrichedFilm = primaryFilm
-    ? matchGhibliFilm(primaryFilm.titleEn, ghibliFilms)
-    : undefined;
 
   return (
     <div className="popup">
@@ -76,22 +66,6 @@ export function LocationPopup({ location, ghibliFilms }: LocationPopupProps) {
 
         <p className="popup__description">{description}</p>
 
-        {/* Film enrichment from Ghibli API */}
-        {enrichedFilm && (
-          <div className="popup__film-meta">
-            <span className="popup__film-meta-item">
-              <span className="popup__film-meta-label">{t('director')}:</span>
-              {enrichedFilm.director}
-            </span>
-            {enrichedFilm.rt_score !== '0' && (
-              <span className="popup__film-meta-item">
-                <span className="popup__film-meta-label">{t('rtScore')}:</span>
-                🍅 {enrichedFilm.rt_score}%
-              </span>
-            )}
-          </div>
-        )}
-
         {/* Multi-film chips */}
         {location.filmIds.length > 1 && (
           <div className="popup__films">
@@ -115,31 +89,25 @@ export function LocationPopup({ location, ghibliFilms }: LocationPopupProps) {
           </div>
         )}
 
-        {/* Sources section */}
-        {location.wikiSlug && (
+        {/* Sources section — only shown when Wikipedia data has loaded */}
+        {wikiUrl && (
           <div className="popup__sources">
             <span className="popup__sources-title">📚 {t('sources')}</span>
-
-            {wikiLoading && (
-              <span className="popup__sources-loading">{t('loadingSources')}</span>
-            )}
 
             {wikiExtract && (
               <p className="popup__wiki-extract">{wikiExtract}</p>
             )}
 
-            {wikiUrl && (
-              <a
-                href={wikiUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="popup__source-link"
-              >
-                <span>📖</span>
-                <span>{t('wikiSource')}</span>
-                <span className="popup__source-link-arrow">→</span>
-              </a>
-            )}
+            <a
+              href={wikiUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="popup__source-link"
+            >
+              <span>📖</span>
+              <span>{t('wikiSource')}</span>
+              <span className="popup__source-link-arrow">→</span>
+            </a>
           </div>
         )}
       </div>
